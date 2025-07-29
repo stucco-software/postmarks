@@ -16,6 +16,7 @@ const ADMIN_LINKS = [
 const router = express.Router();
 
 router.get('/', isAuthenticated, async (req, res) => {
+  console.log('hello?')
   const params = req.query.raw ? {} : { title: 'Bookmarklet' };
   params.adminLinks = ADMIN_LINKS;
   params.currentPath = req.originalUrl;
